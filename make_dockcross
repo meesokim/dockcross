@@ -1,0 +1,6 @@
+#!/bin/bash
+IMAGE=$1
+FILE=dockcross-$1
+docker run --rm dockcross/$1 > ./$FILE
+chmod +x ./$FILE
+mv ./$FILE ~/.local/bin/
